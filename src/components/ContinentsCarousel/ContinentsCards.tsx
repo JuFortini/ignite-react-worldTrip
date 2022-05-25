@@ -5,9 +5,10 @@ interface ContinentsCardsProps {
   position: string,
   continent: string,
   description: string,
+  href: string,
 }
 
-export function ContinentsCards({ image, position, continent, description }: ContinentsCardsProps) {
+export function ContinentsCards({ image, position, continent, description, href }: ContinentsCardsProps) {
   return (
     <Flex
       h="28rem"
@@ -19,6 +20,8 @@ export function ContinentsCards({ image, position, continent, description }: Con
       bgPosition={position}
       bgRepeat="no-repeat"
       bgSize="cover"
+      as="a"
+      href={href}
     >
       <Stack spacing="6" align="center">
         <Heading color="gray.50" fontSize="5xl">{continent}</Heading>

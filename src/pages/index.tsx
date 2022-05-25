@@ -1,7 +1,7 @@
-import { Box, Divider, Flex, Heading } from "@chakra-ui/react";
+import { Divider, Flex, Heading } from "@chakra-ui/react";
 import { ContinentsCarousel } from "../components/ContinentsCarousel";
 import { Header } from "../components/Header";
-import { HomeBanner } from "../components/HomeBanner";
+import { HomeBanner } from "../components/Banners/HomeBanner";
 import { TravelTypes } from "../components/TravelTypes";
 
 export default function Home() {
