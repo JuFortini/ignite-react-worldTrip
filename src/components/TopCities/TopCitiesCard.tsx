@@ -10,7 +10,7 @@ interface TopCitiesCardProps {
 
 export function TopCitiesCard({ image, city, country, countryInitials }: TopCitiesCardProps) {
   return (
-    <Box>
+    <Box w="64">
       <Image 
         fit="cover" 
         w="64" 
@@ -26,6 +26,7 @@ export function TopCitiesCard({ image, city, country, countryInitials }: TopCiti
         borderBottomColor="yellow.100"
         justify="space-between"
         align="center"
+        w="64"
         px="6"
         pt="6"
         pb="8"
@@ -39,7 +40,6 @@ export function TopCitiesCard({ image, city, country, countryInitials }: TopCiti
           svg
           cdnUrl="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/1x1/"
           cdnSuffix="svg"
-          title={countryInitials}
           style={{
             width: "2rem",
             height: "2rem",
