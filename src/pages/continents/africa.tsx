@@ -1,12 +1,36 @@
-import { Box, Flex, HStack, Icon, Text } from "@chakra-ui/react";
-
+import { useEffect, useState } from "react";
+import { Box, Button, Flex, HStack, Text } from "@chakra-ui/react";
 
 import { Header } from "../../components/Header";
 import { ContinentsBanner } from "../../components/Banners/ContinentsBanner";
 import { ContinentInfo } from "../../components/ContinentInfo";
 import { TopCities } from "../../components/TopCities";
+import { api } from "../../services/api";
+
+interface CityProps {
+  id: number;
+  city: string;
+  country: string;
+  continent: string;
+}
 
 export default function Africa() {
+
+  const [cities, setCities] = useState<CityProps[]>([]);
+
+  useEffect(() => {
+
+    async function getCities() {
+      const response = await api.get("cities");
+      const continentCities = response.data.filter((continentCity: CityProps) => {
+        return continentCity.continent === "África";
+      })
+      setCities([...continentCities]);
+    }
+
+    getCities();
+  }, []);
+
   return (
     <Flex direction="column" w="100%" align="center" justify="center" mb="16">
       <Header />
@@ -24,7 +48,7 @@ export default function Africa() {
           <ContinentInfo 
             countries={54} 
             languages="2.092" 
-            topcities={4} 
+            topcities={cities.length} 
             font="Fonte: Euromonitor Internacional" 
           />
         </Box>

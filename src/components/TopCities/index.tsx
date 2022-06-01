@@ -1,7 +1,31 @@
-import { Box, Flex, Grid, Heading, SimpleGrid, Wrap } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
+
 import { TopCitiesCard } from "./TopCitiesCard";
+import { api } from "../../services/api";
+
+interface CityProps {
+  id: number;
+  city: string;
+  image: string;
+  country: string;
+  countryInicials: string;
+  continent: string;
+}
 
 export function TopCities() {
+
+  const [cities, setCities] = useState<CityProps[]>([]);
+
+  useEffect(() => {
+    api.get("cities").then(response => {
+      const cities = response.data.filter((city: CityProps) => {
+        return city.continent === "África";
+      })
+      setCities([...cities]);
+    })
+  }, []);
+
   return (
     <Box w="100%" px="32">
       <Heading mb="12" fontWeight="medium">Cidades +100</Heading>
@@ -11,42 +35,17 @@ export function TopCities() {
         spacingY="12"
         
       >
-        <TopCitiesCard 
-          image="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170"
-          city="Cairo"
-          country="Egito"
-          countryInitials="EG" 
-        />
-        <TopCitiesCard 
-          image="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170"
-          city="Cairo"
-          country="Egito"
-          countryInitials="EG" 
-        />
-        <TopCitiesCard 
-          image="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170"
-          city="Cairo"
-          country="Egito"
-          countryInitials="EG" 
-        />
-        <TopCitiesCard 
-          image="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170"
-          city="Cairo"
-          country="Egito"
-          countryInitials="EG" 
-        />
-        <TopCitiesCard 
-          image="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170"
-          city="Cairo"
-          country="Egito"
-          countryInitials="EG" 
-        />
-        <TopCitiesCard 
-          image="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170"
-          city="Cairo"
-          country="Egito"
-          countryInitials="EG" 
-        />
+        {cities.map(city => {
+          return (
+            <TopCitiesCard 
+              key={city.id}
+              image={city.image}
+              city={city.city}
+              country={city.country}
+              countryInitials={city.countryInicials} 
+            />
+          )
+        })}
       </SimpleGrid>
     </Box>
   )
