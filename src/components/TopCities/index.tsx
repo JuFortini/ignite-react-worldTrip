@@ -13,14 +13,18 @@ interface CityProps {
   continent: string;
 }
 
-export function TopCities() {
+interface ContinentName {
+  continent: string;
+}
+
+export function TopCities({ continent }: ContinentName) {
 
   const [cities, setCities] = useState<CityProps[]>([]);
 
   useEffect(() => {
     api.get("cities").then(response => {
       const cities = response.data.filter((city: CityProps) => {
-        return city.continent === "África";
+        return city.continent === continent;
       })
       setCities([...cities]);
     })

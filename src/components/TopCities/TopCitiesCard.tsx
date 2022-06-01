@@ -2,10 +2,10 @@ import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import ReactCountryFlag from "react-country-flag";
 
 interface TopCitiesCardProps {
-  image: string,
-  city: string,
-  country: string,
-  countryInitials: string,
+  image: string;
+  city: string;
+  country: string;
+  countryInitials: string;
 }
 
 export function TopCitiesCard({ image, city, country, countryInitials }: TopCitiesCardProps) {
@@ -15,7 +15,7 @@ export function TopCitiesCard({ image, city, country, countryInitials }: TopCiti
         fit="cover" 
         w="64" 
         h="44" 
-        src={image} 
+        src={image}
         borderTopRadius="4px"
       />
       <Flex

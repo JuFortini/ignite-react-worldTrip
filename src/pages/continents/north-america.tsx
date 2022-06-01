@@ -7,7 +7,7 @@ import { ContinentInfo } from "../../components/ContinentInfo";
 import { TopCities } from "../../components/TopCities";
 import { api } from "../../services/api";
 
-export default function Africa() {
+export default function NorthAmerica() {
 
   const [cities, setCities] = useState([]);
 
@@ -16,7 +16,7 @@ export default function Africa() {
     async function getCities() {
       const response = await api.get("cities");
       const continentCities = response.data.filter(continentCity => {
-        return continentCity.continent === "África";
+        return continentCity.continent === "América do Norte";
       })
       setCities([...continentCities]);
     }
@@ -28,25 +28,25 @@ export default function Africa() {
     <Flex direction="column" w="100%" align="center" justify="center" mb="16">
       <Header />
       <ContinentsBanner 
-        continent="África" 
-        image="https://images.unsplash.com/photo-1591303872989-2640dc28185b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1481" 
-        position="0 65%" 
+        continent="América do Norte" 
+        image="https://images.unsplash.com/photo-1546436836-07a91091f160?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80" 
+        position="0 40%" 
       />
       <HStack spacing="32" px="32" py="24" w="100%" justify="space-between">
         <Box>
-          <Text>A África não é exatamente uma enorme concentração de terra preenchida por savanas, elefantes, guerras civis e miséria, como muita gente pensa. Os 54 países que compõe o continente africano têm, cada um a sua maneira, charme próprio, belezas naturais, culturas e tradições. E o melhor: grande parte dessas preciosidades ainda é pouco explorada pelo turismo de massa.</Text>
-          <Text>Para muito além do surf na África do Sul ou do safári no Quênia, a região esconde tesouros que se revelam inesquecíveis para quem decide viajar pelo continente sem preconceitos e medos.</Text>
+          <Text>O turismo na América do Norte é como um grande e variado cardápio. Há opções de cidades urbanas e cosmopolitas, desérticas, nevadas, outras para quem gosta de sossego, de baladas, de parques de diversão, de turismo de aventura.</Text>
+          <Text>A oferta é tão grande quando o tamanho do continente, que tem mais de 27,9 milhões de km². Até por isso, viajar para um dos países da América do Norte, ou para todos, é o sonho de consumo de muitos viajantes de todo o mundo. Tanto que, em qualquer época do ano, é bem fácil ouvir os mais diferentes idiomas e sotaques em qualquer cidade dos países que fazem parte dessa região.</Text>
         </Box>
         <Box>
           <ContinentInfo 
-            countries={54} 
-            languages="2.140" 
+            countries={3} 
+            languages="605" 
             topcities={cities.length} 
             font="Fonte: Euromonitor Internacional e Gama Traduções e Interpretações" 
           />
         </Box>
       </HStack>
-      <TopCities continent="África" />
+      <TopCities continent="América do Norte" />
     </Flex>
   );
 }
