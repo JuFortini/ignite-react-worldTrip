@@ -813,6 +813,175 @@ export function makeServer() {
         },
       ])
 
+      this.get("/types", () => {
+        return {
+          night_life: [
+            {
+              id: 1,
+              city: "Ibiza",
+              image: "https://images.unsplash.com/photo-1582368312260-04dd28d21248?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
+              country: "Espanha",
+              countryInicials: "ES",
+              continent: "Europa"
+            },
+            {
+              id: 2,
+              city: "Berlim",
+              image: "https://images.unsplash.com/photo-1599946347371-68eb71b16afc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+              country: "Alemanha",
+              countryInicials: "DE",
+              continent: "Europa"
+            },
+            {
+              id: 3,
+              city: "Nova York",
+              image: "https://images.unsplash.com/photo-1492666673288-3c4b4576ad9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+              country: "Estados Unidos", 
+              countryInicials: "US",
+              continent: "América do Norte"
+            },
+            {
+              id: 4,
+              city: "São Paulo",
+              image: "https://images.unsplash.com/photo-1598900863555-3b098bec6394?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+              country: "Brasil",
+              countryInicials: "BR",
+              continent: "América do Sul"
+            },
+            {
+              id: 5,
+              city: "Londres",
+              image: "https://images.unsplash.com/photo-1598875791852-8bb153e713f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1305&q=80", 
+              country: "Inglaterra",
+              countryInicials: "GB", 
+              continent: "Europa"
+            },
+            {
+              id: 6,
+              city: "Barcelona",
+              image: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80", 
+              country: "Espanha",
+              countryInicials: "ES", 
+              continent: "Europa"
+            },
+            {
+              id: 7,
+              city: "Montreal",
+              image: "https://images.unsplash.com/photo-1559407011-0df8dd5991d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+              country: "Canadá",
+              countryInicials: "CA",
+              continent: "América do Norte"
+            },
+            {
+              id: 8,
+              city: "Las Vegas",
+              image: "https://images.unsplash.com/photo-1581351721010-8cf859cb14a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80", 
+              country: "Estados Unidos",
+              countryInicials: "US", 
+              continent: "América do Norte"
+            },
+            {
+              id: 9,
+              city: "Buenos Aires",
+              image: "https://images.unsplash.com/photo-1612294037637-ec328d0e075e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+              country: "Argentina",
+              countryInicials: "AR",
+              continent: "América do Sul"
+            },
+            {
+              id: 10,
+              city: "Bangkok",
+              image: "https://images.unsplash.com/photo-1593948223686-9f8ea5c55102?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+              country: "Tailândia",
+              countryInicials: "TH", 
+              continent: "Ásia"
+            },
+          ],
+          adventure: [
+            {
+              id: 1,
+              city: "Forsand",
+              image: "https://images.unsplash.com/photo-1561239216-8d8b6afca9d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+              country: "Noruega",
+              countryInicials: "NG",
+              continent: "Europa"
+            },
+            {
+              id: 2,
+              city: "Pokhara",
+              image: "https://images.unsplash.com/photo-1627201436373-384e00505886?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+              country: "Nepal",
+              countryInicials: "NP",
+              continent: "Ásia"
+            },
+            {
+              id: 3,
+              city: "Rissani",
+              image: "https://images.unsplash.com/photo-1613223716452-37f720b2556e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+              country: "Marrocos",
+              countryInicials: "MA",
+              continent: "África"
+            },
+            {
+              id: 4,
+              city: "Bonito",
+              image: "https://images.unsplash.com/photo-1469797384183-f961931553e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+              country: "Brasil",
+              countryInicials: "BR",
+              continent: "América do Sul"
+            },
+            {
+              id: 5,
+              city: "Capadócia",
+              image: "https://images.unsplash.com/photo-1648670329793-e542dbe65bb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80",
+              country: "Turquia",
+              countryInicials: "TR",
+              continent: "Europa"
+            },
+            {
+              id: 6,
+              city: "Banff",
+              image: "https://images.unsplash.com/photo-1561134643-668f9057cce4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+              country: "Canadá",
+              countryInicials: "CA",
+              continent: "América do Norte"
+            },
+            {
+              id: 7,
+              city: "Kanab",
+              image: "https://images.unsplash.com/photo-1522878129833-838a904a0e9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+              country: "Estados Unidos",
+              countryInicials: "US",
+              continent: "América do Norte"
+            },
+            {
+              id: 8,
+              city: "Jasper",
+              image: "https://images.unsplash.com/photo-1549228167-511375f69159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1276&q=80",
+              country: "Canadá",
+              countryInicials: "CA",
+              continent: "América do Norte"
+            },
+            {
+              id: 9,
+              city: "San Pedro de Atacama",
+              image: "https://images.unsplash.com/photo-1540574223031-9322520d58e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+              country: "Chile",
+              countryInicials: "CL",
+              continent: "América do Sul"
+            },
+            {
+              id: 10,
+              city: "Limpopo",
+              image: "https://images.unsplash.com/photo-1577971132997-c10be9372519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+              country: "África do Sul",
+              countryInicials: "ZA",
+              continent: "África"
+            },
+          ]
+        }
+      })
+
       this.passthrough();
     }
   })

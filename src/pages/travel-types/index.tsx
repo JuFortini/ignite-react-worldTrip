@@ -1,5 +1,5 @@
 import { Flex, SimpleGrid, Text } from "@chakra-ui/react";
-import { TypesBanner } from "../../components/Banners/TypesBanner";
+import { TravelTypesBanner } from "../../components/Banners/TravelTypesBanner";
 import { Header } from "../../components/Header";
 import { TypeCard } from "../../components/TravelTypes/TypeCard";
 
@@ -7,7 +7,7 @@ export default function TravelTypes() {
   return (
     <Flex direction="column" w="100%" align="center" justify="center" mb="28">
       <Header />
-      <TypesBanner />
+      <TravelTypesBanner />
       <SimpleGrid
         mt="32"
         px="32"
