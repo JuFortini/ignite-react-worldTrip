@@ -7,8 +7,9 @@ import { ColorModeButtonContext } from "../../contexts/ColorModeButtonContext";
 
 export function Header() {
 
-  const { icon } = useContext(ColorModeButtonContext)
-  const { colorMode, toggleColorMode } = useColorMode();
+  
+  const { icon } = useContext(ColorModeButtonContext);
+  const { toggleColorMode } = useColorMode();
   const { asPath } = useRouter();
 
   let isHomepage = false;
@@ -29,17 +30,18 @@ export function Header() {
       </LinkBox>
       <IconButton 
         aria-label="color mode" 
-        size="sm" as={icon} 
+        fontSize="2xl" 
+        icon={icon} 
         position="absolute" 
         right="0" 
         mx="16" 
         bg="inherit"
         cursor="pointer"
         _hover={{
-          bg: "inherit"
+          bg: "inherit",
         }}
         onClick={toggleColorMode}
-      >{colorMode === "light" ? "Dark" : "Light"}</IconButton>
+      />
     </Flex>
   );
 }
