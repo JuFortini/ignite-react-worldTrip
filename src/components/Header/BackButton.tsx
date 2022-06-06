@@ -11,11 +11,11 @@ export function BackButton() {
       <IconButton 
         icon={<IoIosArrowBack fontSize="20" />} 
         aria-label="voltar" 
-        color="gray.600" 
-        bg="gray.50" 
+        color="inherit" 
+        bg="inherit" 
         onClick={back}
         _hover={{
-          bg:"gray.50"
+          bg:"inherit"
         }}
       />
     </Flex>
