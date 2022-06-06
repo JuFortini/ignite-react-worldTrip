@@ -12,6 +12,8 @@ export function TypesBanner({ bgImage, bgPosition, title }: TypesBannerProps) {
       h="96"
       bgImage={bgImage}
       bgPosition={bgPosition}
+      bgRepeat="no-repeat"
+      bgSize="cover"
       bgColor="blackAlpha.500"
       bgBlendMode="darken"
       w="100%"

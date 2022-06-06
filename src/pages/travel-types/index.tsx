@@ -18,8 +18,7 @@ export default function TravelTypes() {
       >
         <TypeCard href="/travel-types/adventure" src="/images/adventure.png">aventura</TypeCard>
         <TypeCard href="/travel-types/classic" src="/images/classic.png">clássico</TypeCard>
-        <TypeCard href="/travel-types/food" src="/images/food.png">comida</TypeCard>
-        <TypeCard href="/travel-types/cruise" src="/images/cruise.png">cruzeiro</TypeCard>
+        <TypeCard href="/travel-types/gastronomic" src="/images/food.png">gastronômico</TypeCard>
         <TypeCard href="/travel-types/modern" src="/images/modern.png">moderno</TypeCard>
         <TypeCard href="/travel-types/snow" src="/images/cold.png">neve</TypeCard>
         <TypeCard href="/travel-types/beach" src="/images/beach.png">praia</TypeCard>

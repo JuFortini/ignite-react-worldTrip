@@ -15,21 +15,21 @@ interface CityProps {
   continent: string;
 }
 
-export default function nightLife() {
+export default function Modern() {
 
   const [cities, setCities] = useState<CityProps[]>([]);
 
   useEffect(() => {
-    api.get("/types").then(city => setCities(city.data.night_life))
+    api.get("/types").then(city => setCities(city.data.modern))
   }, [])
 
   return (
     <Flex direction="column" w="100%" align="center" justify="center" mb="16">
       <Header />
       <TypesBanner 
-        bgImage="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" 
-        bgPosition="0 70%"
-        title="Vida noturna" 
+        bgImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" 
+        bgPosition="0% 50%"
+        title="Moderno" 
       />
       <SimpleGrid  
         w="100%"
