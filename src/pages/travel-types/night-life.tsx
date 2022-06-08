@@ -15,7 +15,7 @@ interface CityProps {
   continent: string;
 }
 
-export default function nightLife() {
+export default function NightLife() {
 
   const [cities, setCities] = useState<CityProps[]>([]);
 
