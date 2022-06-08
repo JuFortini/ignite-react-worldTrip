@@ -19,22 +19,22 @@ export function Header() {
   }
 
   return (
-    <Flex h="24" w="100%" align="center" justify="center">
+    <Flex h={["14", "24"]} w="100%" align="center" justify="center">
       { !isHomepage && 
         <BackButton />
       }
       <LinkBox>
         <LinkOverlay href="/">
-          <Image src="/logo.svg" h="12" />
+          <Image src="/logo.svg" h={["6", "12"]} />
         </LinkOverlay>
       </LinkBox>
       <IconButton 
         aria-label="color mode" 
-        fontSize="2xl" 
+        fontSize={["md", "2xl"]} 
         icon={icon} 
         position="absolute" 
         right="0" 
-        mx="16" 
+        mx={["4", "16"]} 
         bg="inherit"
         cursor="pointer"
         _hover={{

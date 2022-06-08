@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, useBreakpointValue } from "@chakra-ui/react";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { PaginationOptions } from "swiper/types";
@@ -12,21 +12,39 @@ import "swiper/css/pagination";
 
 export function ContinentsCarousel() {
 
+  const isLargeWindow = useBreakpointValue({
+    base: true,
+    md: false,
+  })
+
   const pagination: PaginationOptions = {
     clickable: true,
   };
 
-  const style = {
-    "--swiper-theme-color": "#FFBA08",
-    "--swiper-navigation-size": "40px",
-    "--swiper-pagination-bullet-width": "12px",
-    "--swiper-pagination-bullet-height": "12px",
-    "--swiper-pagination-bullet-inactive-color": "#FFFFFF",
-    "--swiper-pagination-bullet-inactive-opacity": "0.4",
+  let style: CSSProperties;
+
+  if (!isLargeWindow) {
+    style = {
+      "--swiper-theme-color": "#FFBA08",
+      "--swiper-navigation-size": "40px",
+      "--swiper-pagination-bullet-width": "12px",
+      "--swiper-pagination-bullet-height": "12px",
+      "--swiper-pagination-bullet-inactive-color": "#FFFFFF",
+      "--swiper-pagination-bullet-inactive-opacity": "0.4",
     } as CSSProperties
+  } else {
+    style = {
+      "--swiper-theme-color": "#FFBA08",
+      "--swiper-navigation-size": "20px",
+      "--swiper-pagination-bullet-width": "8px",
+      "--swiper-pagination-bullet-height": "8px",
+      "--swiper-pagination-bullet-inactive-color": "#FFFFFF",
+      "--swiper-pagination-bullet-inactive-opacity": "0.4",
+    } as CSSProperties
+  }
 
   return (
-    <Box h="28rem" w="85%">
+    <Box h={["16rem", "28rem"]} w="85%">
       <Swiper
         style={style}
         navigation={true}
