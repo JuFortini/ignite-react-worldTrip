@@ -23,11 +23,7 @@ export function Header() {
       { !isHomepage && 
         <BackButton />
       }
-      <LinkBox>
-        <LinkOverlay href="/">
-          <Image src="logo.svg" alt="logo worldTrip" h={["6", "12"]} />
-        </LinkOverlay>
-      </LinkBox>
+      <Image src="logo.svg" alt="logo worldTrip" h={["6", "12"]} />
       <IconButton 
         aria-label="color mode" 
         fontSize={["md", "2xl"]} 

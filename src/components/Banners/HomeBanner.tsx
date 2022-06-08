@@ -20,7 +20,7 @@ export function HomeBanner() {
           <Text color="gray.50" fontWeight="light" fontSize={["sm", "md"]}>Chegou a hora de tirar do papel a viagem que você sempre sonhou.</Text>
         </Stack>
         { isLargeWindow && 
-          <Image position="relative" top="16" src="airplane.svg" h="80" transform="rotate(5deg)" />
+          <Image position="relative" top="16" src="/airplane.svg" h="80" transform="rotate(5deg)" />
         }
       </HStack>
     </Box>
