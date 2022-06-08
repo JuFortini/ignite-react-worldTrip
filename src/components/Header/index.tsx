@@ -22,7 +22,7 @@ export function Header() {
       { !isHomepage && 
         <BackButton />
       }
-      <Image src="/airplane.svg" />
+      <Image src="/logo.svg" />
       <LinkBox>
         <LinkOverlay href="/">
           <Image src="/logo.svg" alt="logo worldTrip" h={["6", "12"]} />
