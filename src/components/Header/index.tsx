@@ -24,7 +24,7 @@ export function Header() {
       }
       <LinkBox>
         <LinkOverlay href="/">
-          <Image src="/logo1.svg" alt="logo worldTrip" h={["6", "12"]} />
+          <Image src="/logo.svg" alt="logo worldTrip" h={["6", "12"]} />
         </LinkOverlay>
       </LinkBox>
       <IconButton 
