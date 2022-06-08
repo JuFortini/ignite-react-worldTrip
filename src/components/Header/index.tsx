@@ -7,7 +7,6 @@ import { ColorModeButtonContext } from "../../contexts/ColorModeButtonContext";
 
 export function Header() {
 
-  
   const { icon } = useContext(ColorModeButtonContext);
   const { toggleColorMode } = useColorMode();
   const { asPath } = useRouter();
@@ -23,7 +22,12 @@ export function Header() {
       { !isHomepage && 
         <BackButton />
       }
-      <Image src="logo.svg" alt="logo worldTrip" h={["6", "12"]} />
+      <Image src="/airplane.svg" />
+      <LinkBox>
+        <LinkOverlay href="/">
+          <Image src="/logo.svg" alt="logo worldTrip" h={["6", "12"]} />
+        </LinkOverlay>
+      </LinkBox>
       <IconButton 
         aria-label="color mode" 
         fontSize={["md", "2xl"]} 
