@@ -9,7 +9,7 @@ interface ContinentsBannerProps {
 export function ContinentsBanner({ image, position, continent }: ContinentsBannerProps) {
   return (
     <Box 
-        h="31rem"
+        h={["10rem", "31rem"]}
         bgImage={image}
         bgRepeat="no-repeat"
         bgPosition={position}
@@ -18,8 +18,8 @@ export function ContinentsBanner({ image, position, continent }: ContinentsBanne
         bgSize="cover"
         w="100%"
       >
-        <Flex mx="8rem" my="6rem" h="calc(31rem - (2 * 6rem))" align="end">
-          <Heading color="gray.50" fontSize="5xl" fontWeight="semibold">{continent}</Heading>
+        <Flex mx={["0", "8rem"]} my={["0", "6rem"]} h={["calc(10rem - (2 * 0rem))", "calc(31rem - (2 * 6rem))"]} align={["center", "end"]} justify={["center", "flex-start"]}>
+          <Heading color="gray.50" fontSize={["3xl","5xl"]} fontWeight="semibold">{continent}</Heading>
         </Flex>
       </Box>
   );

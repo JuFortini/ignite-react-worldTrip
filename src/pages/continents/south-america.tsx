@@ -32,8 +32,15 @@ export default function SouthAmerica() {
         image="https://images.unsplash.com/photo-1633421332483-1aa89f0c6b9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" 
         position="0 50%" 
       />
-      <HStack spacing="32" px="32" py="24" w="100%" justify="space-between">
-        <Box>
+      <Flex 
+        direction={["column", "column", "column", "column", "row"]} 
+        align="center" 
+        px={["4", "32"]} 
+        py={["6", "24"]} 
+        w="100%" 
+        justify="space-between"
+      >
+        <Box mr={["0","0", "0", "0", "32"]} fontSize={["sm", "md", "lg"]} textAlign="justify">
           <Text>O turismo na América do Sul é bem variado. Afinal, o continente de mais de 17,8 milhões de km² tem uma grande variedade de paisagens, climas e estilos em cada um dos países que o formam. Por isso, fazer turismo no continente sul-americano agrada a qualquer tipo de viajante, desde aquele que prefere praias de mar azul cristalino a aqueles que buscam paisagens de deserto ou mesmo esquiar na neve.</Text>
           <Text>Vale lembrar que os países têm muita história para contar que datam de bem antes da chegada dos conquistadores portugueses e espanhóis ao continente. Por todo território há vestígios da vida dos indígenas e de outras civilizações que moravam na região, como os Incas, além das influências europeias. Tudo isso, aliado às belas paisagens naturais sul-americanas transformaram a região em um grande polo turístico visitado por viajantes de todo o mundo.</Text>
         </Box>
@@ -45,7 +52,7 @@ export default function SouthAmerica() {
             font="Fonte: Euromonitor Internacional e Gama Traduções e Interpretações" 
           />
         </Box>
-      </HStack>
+      </Flex>
       <TopCities continent="América do Sul" />
     </Flex>
   );

@@ -11,11 +11,11 @@ interface CityTypeCardProps {
 
 export function CityTypeCard({ image, city, country, countryInicials, continent }: CityTypeCardProps) {
   return (
-    <Flex w="550px">
+    <Flex w={["160px", "160px", "240px", "550px"]}>
       <Image  
         src={image} 
-        w="280px"
-        h="220px"
+        w={["180px", "180px", "180px", "280px"]}
+        h={["180px", "180px", "180px", "220px"]}
         objectFit="cover"
         borderLeftRadius="6px"
       />
@@ -29,12 +29,12 @@ export function CityTypeCard({ image, city, country, countryInicials, continent 
         borderBottomWidth="1px"
         borderBottomColor="yellow.200"
       >
-        <Flex direction="column" justify="space-between" p="10" h="100%">
-          <Text fontSize="3xl" lineHeight="8" fontWeight="semibold" fontFamily="Barlow" mb="4">{city}</Text>
-          <Flex w="52" justify="space-between" align="center">
+        <Flex w="100%" direction="column" justify="space-between" px={["4", "4", "10"]} py={["6", "6", "10"]} h="100%">
+          <Text fontSize={["xl", "3xl"]} lineHeight="8" fontWeight="semibold" fontFamily="Barlow" mb="4">{city}</Text>
+          <Flex w={["32", "52"]} justify="space-between" align="center">
             <Box>
-              <Text fontSize="lg" fontWeight="medium" color="gray.400" fontFamily="Barlow">{country}</Text>
-              <Text fontSize="sm" fontWeight="medium" color="gray.300" fontFamily="Barlow">{continent}</Text>
+              <Text fontSize={["md", "lg"]} fontWeight="medium" color="gray.400" fontFamily="Barlow">{country}</Text>
+              <Text fontSize={["xs", "sm"]} fontWeight="medium" color="gray.300" fontFamily="Barlow">{continent}</Text>
             </Box>
             <ReactCountryFlag
               countryCode={countryInicials}

@@ -31,11 +31,11 @@ export function TopCities({ continent }: ContinentName) {
   }, []);
 
   return (
-    <Box w="100%" px="32">
-      <Heading mb="12" fontWeight="medium">Cidades +100</Heading>
+    <Box w="100%" px={["4", "32"]}>
+      <Heading mb={["6", "12"]} fontSize={["2xl", "4xl"]} fontWeight="medium">Cidades +100</Heading>
       <SimpleGrid 
-        templateColumns="repeat(auto-fit, minmax(256px, 256px))"
-        justifyContent="space-between"
+        templateColumns="repeat(auto-fit, minmax(260px, 260px))"
+        justifyContent={["center", "space-between"]}
         spacingY="12"
         
       >

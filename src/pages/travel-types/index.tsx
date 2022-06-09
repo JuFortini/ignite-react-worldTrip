@@ -9,12 +9,13 @@ export default function TravelTypes() {
       <Header />
       <TravelTypesBanner />
       <SimpleGrid
-        mt="32"
-        px="32"
+        mt={["16", "16","32"]}
+        px={["8", "12", "32"]}
         w="100%"
-        templateColumns="repeat(auto-fit, minmax(230px, 230px))"
-        justifyContent="space-between"
+        templateColumns={["repeat(auto-fit, minmax(112px, 120px))", "repeat(auto-fit, minmax(112px, 120px))", "repeat(auto-fit, minmax(160px, 230px))"]}
+        justifyContent={["center", "space-between"]}
         spacingY="12"
+        spacingX="6"
       >
         <TypeCard href="/travel-types/adventure" src="/images/adventure.png">aventura</TypeCard>
         <TypeCard href="/travel-types/classic" src="/images/classic.png">clássico</TypeCard>

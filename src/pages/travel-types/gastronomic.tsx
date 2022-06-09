@@ -33,8 +33,8 @@ export default function Gatronomic() {
       />
       <SimpleGrid  
         w="100%"
-        mt="32"
-        px="40" 
+        mt={["8", "16", "24", "32"]}
+        px={["6", "16", "32", "40"]}  
         templateColumns="repeat(auto-fit, minmax(550px, 550px))"
         justifyContent="space-between"
         spacingY="12"
